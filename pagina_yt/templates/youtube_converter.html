@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertir YouTube a MP3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    {% if download_link %}
+    <p>Presiona en descargar, una vez que lo hagas espera a ser redireccionado para concretar tu descarga.</p>
+    <p>Descarga tu archivo MP3: <a href="{{ download_link }}">Descargar MP3</a></p>
+    {% endif %}
+
+    {% if download_message %}
+    <p>{{ download_message }}</p>
+    {% endif %}
+</body>
+<script>
+
+</script>
+</html>

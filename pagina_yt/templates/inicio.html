@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi sitio</h1>
+    <p>Explora y disfruta de nuestro contenido.</p>
+    <div>
+        <p>
+            Esta aplicacion tiene la opcion de descargar canciones unicas y playlist solo pega la direccion de la playlist o tu cancion y obten tu musica, puede que tarde un poco ya que convierte los archivos .webm a mp3 pero puedes estar seguro de que vas a tener tu musica.
+        </p>
+        <p>{{ error_url }}</p>
+    </div>
+    <!-- Agrega un formulario para ingresar la URL de YouTube -->
+    <form action="{% url 'youtube_converter' %}" method="post">
+        <label for="url">Ingresa la URL de YouTube:</label>
+        <input type="text" name="url" required>
+        <button type="submit">Convertir a MP3</button>
+    </form>
+</body>
+<script>
+</script>
+</html>
